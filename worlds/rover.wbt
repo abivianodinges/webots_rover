@@ -1,0 +1,40 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.8055280404224626 0.5710898236041324 0.15805375499793775 0.6618765460914104
+  position 1.9394473009714222 2.4519293684625243 3.5475755586793927
+}
+Background {
+  skyColor [
+    0.15 0.45 1
+  ]
+}
+PointLight {
+  attenuation 0 0 1
+  location 0 0.3 0
+}
+Ground {
+}
+Wall1 {
+  translation -0.5 0.03 0
+}
+Wall2 {
+  translation 0.5 0.03 0
+}
+Wall3 {
+  translation 0 0.03 0.5
+  rotation 0 1 0 1.5708
+}
+Wall4 {
+  translation 0 0.03 -0.5
+  rotation 0 1 0 1.5708
+}
+FourWheelsRobot {
+  translation 0 0.2 0
+  controller "rovio"
+}
+SphereProto {
+  translation 0.294939 0.2 0.0775067
+}

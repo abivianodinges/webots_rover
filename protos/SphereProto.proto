@@ -1,0 +1,26 @@
+PROTO SphereProto [
+  field SFVec3f   translation   0 0 0
+  field SFRotation rotation    0 1 0 0
+  field SFFloat   bodyMass    1
+]
+{
+Solid {
+  translation IS translation
+  rotation IS rotation
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+      }
+      geometry DEF Sphere Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  boundingObject USE Sphere
+  physics Physics {
+    mass IS bodyMass
+  }
+}
+}
